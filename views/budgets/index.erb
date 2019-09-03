@@ -1,0 +1,20 @@
+<div class="sml-logo flex flex-row">
+  <img class="sml-logo-dragon justify-center" src="/img/dragongif.gif" alt="dragon on gold">
+  <img class="sml-logo-words justify-center" src="/img/md-txt-trans.png" alt="moneydragon text">
+</div>
+
+<h1>My Budgets:</h1>
+<a class="ctr-btn inline-flex" href="/budgets/new">add new budget</a>
+<br />
+<br />
+<hr />
+<%for budget in @budgets%>
+<div class="inline-flex">
+  <h3><%=budget.name.capitalize%> - £<%=budget.total%> </h3>
+  <h3 style="color: red; margin-left:1em"> <%=budget.warning()%></h3>
+</div>
+<a href="/budgets/<%=budget.id%>">more details</a>
+<hr />
+<%end%>
+<br />
+<a class="ctr-btn inline-flex" href="/">home</a>

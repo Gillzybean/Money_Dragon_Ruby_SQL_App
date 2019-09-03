@@ -1,0 +1,68 @@
+
+<div class="sml-logo flex flex-row">
+  <img class="sml-logo-dragon justify-center" src="/img/dragongif.gif" alt="dragon on gold">
+  <img class="sml-logo-words justify-center" src="/img/md-txt-trans.png" alt="moneydragon text">
+</div>
+
+<h1>Add new spending details:</h1>
+
+<form class="flex ctr-form"  action="/spending" method="POST">
+  <div class="flex-column">
+
+    <div class="flex flex-column" style="width: 20em; justify-content: center;">
+      <label for="dd-budget"><p style="text-align:center">For budget:</p></label>
+      <select required name="budget_id" id="dd-budget">
+        <option value="" selected disabled>Select a budget (required):</option>
+        <%for budget in @budgets%>
+        <option value="<%=budget.id%>"><%=budget.name.capitalize%></option>
+        <%end%>
+      </select>
+    </div>
+
+    <br />
+    <div class="amount flex flex-column" style="width: 20em; justify-content: center;">
+      <p>I spent:</p>
+      <div class="flex-row flex" style="width: 20em; justify-content: center;">
+        <label  style="padding:0em 4em 0em 0em;" for="add-amount">Amount (£): </label>
+        <input required min="0" type="number" id="add-amount" name="amount">
+      </div>
+    </div>
+
+    <div class="flex" style="width: 20em; justify-content: center;">
+      <label style="padding:0em 6em 0em 0em;" for="dd-merchant">At:</label>
+      <select required name="merchant_id" id="dd-merchant">
+        <option value="" selected disabled>Select a place (required):</option>
+        <%for merchant in @merchants%>
+        <option value="<%=merchant.id%>"><%=merchant.name.capitalize%></option>
+        <%end%>
+      </select>
+    </div>
+
+    <div class="flex" style="width: 20em; justify-content: center;">
+      <label style="padding:0em 6em 0em 0em;" for="dd-month">In:</label>
+      <select required name="month_id" id="dd-month">
+        <option value="" selected disabled>Select a time (required):</option>
+        <%for month in @months%>
+        <option value="<%=month.id%>"><%=month.name.capitalize%></option>
+        <%end%>
+      </select>
+    </div>
+
+    <div class="flex" style="width: 20em; justify-content: center;">
+      <label style="padding:0em 4em 0em 0em;" for="dd-tag">Tag as:</label>
+      <select required name="tag_id" id="dd-tag">
+        <option value="" selected disabled>Select a tag (required):</option>
+        <%for tag in @tags%>
+        <option value="<%=tag.id%>"><%=tag.type.downcase%></option>
+        <%end%>
+      </select>
+    </div>
+    <br />
+
+    <div class="flex" style="width: 20em; justify-content: center;">
+      <input class="submit-btn" type="submit" value="add">
+      </div>
+    </div>
+  </form>
+  <br />
+  <a class="flex ctr-btn inline-flex" href="/">home</a>

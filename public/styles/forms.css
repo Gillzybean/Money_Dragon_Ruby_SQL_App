@@ -1,0 +1,29 @@
+/* ---------FORM CSS------- */
+form{
+  font-size:1.2em;
+}
+
+form.ctr-form{
+  justify-content: center;
+}
+
+/* label{
+  padding:0em 4em 0em 0em;
+  justify-content: flex-start;
+  width: 10em;
+} */
+
+form.add-spending{
+  font-size: 1.3em;
+}
+
+select{
+  color: white;
+  background-color: black;
+  font-family: cursive;
+  font-size: 0.7em;
+}
+
+select.option{
+  background-color: white;
+}

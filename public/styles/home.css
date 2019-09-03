@@ -1,0 +1,56 @@
+/* ------HOME LOGO -------- */
+.home{
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* logos stay same size regardless of screensize */
+.hlogo-dragon{
+  width: 20em;
+}
+
+.hlogo-words{
+  margin-top: -6em;
+  width: 25em;
+}
+
+/* ---- TEXT ----- */
+
+.home h1{
+  margin-top: -1em;
+  font-size: 2em;
+
+}
+
+.fun_words{
+
+}
+
+p.desc{
+  padding:0;
+}
+
+.spending{
+  transform: rotate(45deg);
+  transform-origin:left;
+  margin-top: -2em;
+  font-size: 2em;
+  line-height: 6em;
+}
+
+.analyse{
+  transform: rotate(-45deg);
+  transform-origin:right;
+  margin-top: -2em;
+  font-size: 2em;
+  line-height: 4em;
+}
+
+.hoard{
+  transform: rotate(45deg);
+  transform-origin:left;
+  font-size: 2em;
+  line-height: 6em;
+}
